@@ -1,0 +1,136 @@
+/*PATIENT START */
+.patient {
+  background-size: cover;
+  .userBar {
+    text-align: center;
+    //box-shadow: 0px 3px 0px 0px rgb(77, 152, 177);
+    overflow: hidden;
+    position: relative;
+    a {
+      display: block;
+      padding: 15px;
+      font-size: 20px;
+      text-decoration: none;
+      font-family: serif;
+      float: left;
+      color: rgb(77, 152, 177);
+    }
+  }
+
+  .userAvatarParent {
+    padding: 12px 17px;
+    float: left;
+    img {
+      width: 25px;
+      border-radius: 20px;
+      float: left;
+    }
+  }
+
+  .userMenu {
+    overflow: hidden;
+    li {
+      list-style: none;
+      float: left;
+      width: 47%;
+      margin-bottom: 6%;
+      //box-shadow: 0px 3px 0px 0px rgb(77, 152, 177);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      border: 2px solid white;
+      a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        padding: 5px 0;
+        display: inline-block;
+        font-size: 13px;
+      }
+    }
+
+    li:nth-child(1) {
+      float: left;
+    }
+    li:nth-child(2) {
+      float: right;
+    }
+    li:nth-child(3) {
+      float: left;
+    }
+    li:nth-child(4) {
+      float: right;
+    }
+    .errMsg {
+      color: rgb(234, 177, 177);
+    }
+  }
+
+  //header {
+  //  //background: rgb(77, 152, 177);
+  //  text-align: center;
+  //  color: rgb(255, 255, 255);
+  //  text-transform: uppercase;
+  //  padding: 2em;
+  //}
+
+  .content {
+    margin: 4%;
+  }
+  .userBarChild {
+    position: absolute;
+    z-index: 2;
+  }
+
+  .parentLinkInLi {
+    position: relative;
+    z-index: 3;
+    padding: 16px 0;
+  }
+  .sisterAlarm {
+    text-align: center;
+    margin: 20px 0px;
+    //box-shadow: 0px 3px 0px 0px rgb(77, 152, 177);
+    overflow: hidden;
+    position: relative;
+    border: 2px solid white;
+  }
+
+
+
+  .sisterAlarmChild {
+    padding: 42px 0;
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+  }
+
+  .sisterAlarm div {
+    color: rgb(255, 255, 255);
+    //float: left;
+    font-size: 25px;
+  }
+  .iconParent{
+    float: right;
+    position: relative;
+    width: 50%;
+    ng-md-icon{
+      //position: absolute;
+      //top: -7px;
+      //right: 0;
+
+    }
+    //ng-md-icon:after{
+    //  content: '/';
+    //  clear: both;
+    //}
+  }
+  .alarmTextParent{
+    width: 50%;
+    float: left;
+    text-align: center;
+    margin-top: 7px;
+  }
+
+}
+
+/*PATIENT END */

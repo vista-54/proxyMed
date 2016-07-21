@@ -1,0 +1,51 @@
+<md-toolbar class="md-primary">
+    <div class="md-toolbar-tools">
+        <span>
+          <md-menu name="'menu1'" cascade="true" direction="'down'" value="'File'" >
+            <md-menu-item ng-click="">New File</md-menu-item>
+            <md-menu-item ng-click="">Save</md-menu-item>
+            <md-menu-item ng-click="">Save As...</md-menu-item>
+            <md-menu-item ng-click="">Close File</md-menu-item>
+          </md-menu></span>
+    </div>
+</md-toolbar>
+<div layout="row" flex >
+    <div layout="column" flex id="content">
+        <md-content layout="column" flex class="md-padding">
+            <br />
+            <br />
+            <p>
+                A menu with
+                <md-menu name="'menu2'" direction="'down'" value="'down'" >
+                    <md-menu-item ng-click="">down</md-menu-item>
+                    <md-menu-item ng-click="">item 2</md-menu-item>
+                    <md-menu-item ng-click="">item 3</md-menu-item>
+                    <md-menu-item ng-click="">item 4</md-menu-item>
+                </md-menu>
+                direction.
+            </p>
+            <br />
+            <p>
+                A menu with
+                <md-menu name="'menu3'" direction="'up'" value="'up'" >
+                    <md-menu-item ng-click="">item 3</md-menu-item>
+                    <md-menu-item ng-click="">item 2</md-menu-item>
+                    <md-menu-item ng-click="">item 1</md-menu-item>
+                    <md-menu-item ng-click="">up</md-menu-item>
+                </md-menu>
+                direction.
+            </p>
+            <br />
+            <p>
+                A menu with
+                <md-menu name="'menu4'" scroll-count="3" direction="'down'" value="'scrollable'" >
+                    <md-menu-item ng-click="">scrollable</md-menu-item>
+                    <md-menu-item ng-click="">item 2</md-menu-item>
+                    <md-menu-item ng-click="">item 3</md-menu-item>
+                    <md-menu-item ng-click="">item 4</md-menu-item>
+                </md-menu>
+                items.
+            </p>
+        </md-content>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+.procedures {
+  margin: $mainMargin;
+  ul {
+    overflow: visible;
+    padding-top: 20px;
+    li {
+      //width: ;
+      text-align: left;
+      color: rgb(255, 255, 255);
+      .moreInfoBlock {
+
+      }
+      .visible {
+        display: block;
+      }
+      .inVisible {
+        display: none;
+      }
+      a {
+        text-transform: capitalize;
+      }
+      .parentLinkInLi {
+        padding-left: 5px !important;
+      }
+      div {
+
+        float: left;
+        width: 50%;
+        .time{
+          padding-right: 20px;
+          float: left;
+        }
+        span{
+          outline: none;
+        }
+      }
+    }
+  }
+}

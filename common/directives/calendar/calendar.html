@@ -1,0 +1,16 @@
+<div class="currMonthAndYear">
+    <ng-md-icon switcher class="backBtn" icon="keyboard_arrow_left" style="fill:white" size="20"
+                ng-click="lastMonth()"></ng-md-icon>
+    <span class="month">{{month.currMonth.name}}</span><span class="year">{{month.currYear}}</span>
+    <ng-md-icon switcher class="nextBtn" icon="keyboard_arrow_right" style="fill:white" size="20"
+                ng-click="nextMonth()"></ng-md-icon>
+</div>
+<ul class="calendar">
+    <li name="dayOfWeek" ng-repeat="(key,sh) in shortDays" data-test="{{key===6}}" class="shortDays" ng-class="{'weekend':key===5||key===6}">
+        <span></span>
+    </li>
+    <li  day name="day" ng-repeat="day in month.days track by $index"
+        ng-class="{'whiteBorder':currentMonth===$parent.month.currMonth.number?(day.day===currentDay):''}" ng-click="setData(this.day.day,$parent.month.currMonth.number,$parent.month.currYear)">
+        <span data-curr-month="{{currentMonth}}" data-month="{{$parent.month.currMonth.number}}" data-day="{{currentDay}}" ng-class="{'currentDay':currentMonth===$parent.month.currMonth.number?(day.day===currentDay):'','dayLast':day.last}" >{{day.day}}</span>
+    </li>
+</ul>

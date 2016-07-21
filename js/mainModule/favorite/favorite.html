@@ -1,0 +1,14 @@
+<px-header></px-header>
+<div class="favorite">
+    <h1>Мої лікарі:</h1>
+    <ul>
+        <li ng-repeat="favorite in favorites">
+            <div>
+                <p>{{favorite.doctor_last_name}}</p>
+                <p>{{favorite.doctor_first_name}} {{favorite.doctor_second_name}}</p>
+                <p>{{favorite.department}} {{favorite.specialization}}, <span>Кабінет: {{favorite.office}}</span></p>
+            </div>
+            <div favorite data-inFavorites="true" data-doctor-id="{{favorite.doctor_id}}" data-row-id="{{favorite.id}}"></div>
+        </li>
+    </ul>
+</div>

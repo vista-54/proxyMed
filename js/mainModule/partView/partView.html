@@ -1,0 +1,33 @@
+<px-header></px-header>
+<div class="partView">
+    <h1> Графік чергувань</h1>
+    <h2>Відділення: {{currPart}}</h2>
+
+    <!--<div class="dataPickerParent">-->
+    <!--<input type="date" ng-change="dataPickerChaned(currdate)" ng-model="currdate">-->
+    <!--</div>-->
+    <ul class="list">
+
+        <li ng-repeat="doctor in doctors">
+            <!--<div class="sisterAlarmBg">-->
+
+            <!--</div>-->
+            <div class="parentLinkInLi">
+
+                <a ui-sref="queue({shifts_id:{{doctor.id}},doctor_id:{{doctor.user_id}}})">
+                    <div>
+                        <p class="doctor">{{doctor.username}}</p>
+                        <p class="workTime">{{getDate(this.doctor.date_from)}}-{{getDate(this.doctor.date_to)}}</p>
+                    </div>
+                    <div>
+                        <span class="timeLine">Записатися</span>
+                    </div>
+                </a>
+            </div>
+
+        </li>
+    </ul>
+    <div calendar class="calendarMainBlock">
+
+    </div>
+</div>

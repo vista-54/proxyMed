@@ -1,0 +1,21 @@
+<header>
+    <span back-btn></span>
+    <img alt="logo" src="common/img/logo.png">
+    <!--<span menu></span>-->
+
+
+
+    <md-menu style="float: right;padding: 0 3%">
+        <!--<md-button aria-label="Open demo menu" class="md-icon-button" >-->
+            <ng-md-icon  icon="menu" ng-click="$mdOpenMenu($event)" style="fill:white" size="40"></ng-md-icon>
+        <!--</md-button>-->
+        <md-menu-content width="6">
+            <md-menu-item ng-repeat="item in menuItems">
+                <md-button ui-sref="{{item.link}}">
+                     {{item.name}}
+                </md-button>
+            </md-menu-item>
+        </md-menu-content>
+    </md-menu>
+    </md-menu>
+</header>

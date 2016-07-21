@@ -1,0 +1,404 @@
+/*LOGINPAGE START*/
+header h1 {
+  text-transform: uppercase;
+  color: rgb(21, 104, 132);
+  font-size: 30px;
+  text-align: center;
+  height: 45px;
+  padding: 36px 0 0;
+}
+
+
+input::-webkit-input-placeholder {
+  color: #c9d3dc;
+}
+a, div, h1 {
+  font-family: 'Trebuchet MS';
+}
+
+hgroup {
+  text-align: center;
+  margin-top: 4em;
+}
+
+h1, h3 {
+  font-weight: 300;
+}
+
+h1 {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+h3 {
+  color: #4a89dc;
+}
+
+form {
+  /*width: 380px;*/
+  /*margin:0 auto;*/
+  padding: 0 2em;
+  position: relative;
+  z-index: 3;
+  /*background: #fafafa;*/
+  /*    border: 1px solid #ebebeb;
+      box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;*/
+  //input:nth-child(1){
+  //  background-image: url('../img/icons/login_mail.png');
+  //  background-size: 1.2em;
+  //}
+  div{
+    position: relative;
+      .icon{
+        position: absolute;
+      }
+  }
+}
+
+.group {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+//.checkbox label {
+//  position: static;
+//}
+
+//input {
+//  font-size: 18px;
+//  padding: 10px 10px 10px 5px;
+//  -webkit-appearance: none;
+//  display: block;
+//  background: transparent;
+//  color: rgb(0, 0, 0);
+//  width: 100%;
+//  border: none;
+//  border-radius: 0;
+//  border-bottom: 1px solid #757575;
+//  box-sizing: border-box;
+//}
+
+//.checkbox label {
+//  pointer-events: all;
+//}
+
+input[type=checkbox] {
+  -webkit-appearance: checkbox;
+  display: inline-block;
+  width: auto;
+}
+
+//label[name=remember] {
+//  color: rgb(158, 151, 151);
+//}
+
+input:focus {
+  outline: none;
+  border: 0
+}
+
+/* Label */
+
+//label {
+//  color: rgb(77, 152, 177);
+//  font-size: 18px;
+//  font-weight: normal;
+//  position: absolute;
+//  pointer-events: none;
+//  left: 5px;
+//  top: 10px;
+//  transition: all 0.2s ease;
+//}
+
+/* active */
+
+//input:focus ~ label, input.used ~ label {
+//  top: -20px;
+//  transform: scale(.75);
+//  left: -2px;
+//  /* font-size: 14px; */
+//  /*color: rgb(158, 151, 151);*/
+//}
+
+//input:checked ~ label {
+//  color: rgb(158, 151, 151);
+//}
+
+/* Underline */
+
+.bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.bar:before, .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: rgb(77, 152, 177);
+  transition: all 0.2s ease;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+/* active */
+
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width: 50%;
+}
+
+/* Highlight */
+
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* active */
+
+input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+}
+
+/* Animations */
+
+@keyframes inputHighlighter {
+  from {
+    background: #4a89dc;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+/* Button */
+
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  margin: .3em 0 1em 0;
+  width: 100%;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  letter-spacing: 1px;
+  background: rgb(77, 152, 177);
+  border: 0;
+  border: 1px solid rgb(255, 255, 255);
+  /*border-bottom: 2px solid #3160B6;*/
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.button:focus {
+  outline: 0;
+}
+
+/* Button modifiers */
+
+.buttonBlue {
+  background: #4a89dc;
+  text-shadow: 1px 1px 0 rgba(39, 110, 204, .5);
+}
+
+.buttonGreen {
+  background: #23C108;
+  text-shadow: 1px 1px 0 rgba(39, 110, 204, .5);
+}
+
+.buttonBlue:hover {
+  background: #357bd8;
+}
+
+/* Ripples container */
+
+.ripples {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+
+/* Ripples circle */
+
+.ripplesCircle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.ripples.is-active .ripplesCircle {
+  animation: ripples .4s ease-in;
+}
+
+/* Ripples animation */
+
+@keyframes ripples {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  100% {
+    width: 200%;
+    padding-bottom: 200%;
+    opacity: 0;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 80px 0 5px;
+}
+
+footer p {
+  color: #888;
+  font-size: 13px;
+  letter-spacing: .4px;
+}
+
+footer a {
+  color: #4a89dc;
+  text-decoration: none;
+  transition: all .2s ease;
+}
+
+footer a:hover {
+  color: #666;
+  text-decoration: underline;
+}
+
+footer img {
+  width: 80px;
+  transition: all .2s ease;
+}
+
+footer img:hover {
+  opacity: .83;
+}
+
+footer img:focus, footer a:focus {
+  outline: none;
+}
+
+.login {
+  /*background-image: url('../img/bg_login.jpg');*/
+
+  .FormBg {
+    height: 400px;
+    position: absolute;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    opacity: 0.6;
+    z-index: 1;
+  }
+
+  .login h1 {
+    text-align: center;
+    padding-top: 30px;
+    /*color: rgb(255,255,255);*/
+
+  }
+
+  .formLinkParent {
+    text-align: center;
+  }
+
+  .formLinkParent a {
+    color: rgb(158, 151, 151);
+  }
+  .inputParent{
+    input {
+      height: 38px;
+      background: #50597b;
+      color: #c9d3dc;
+      padding: 0.7em 0 0.7em 3em;
+      font-size: 16px;
+      border-radius: 5px;
+      margin: 0.5em auto;
+      width: 100%;
+      border: 0;
+      //border-color: #2f3652;
+      box-sizing: border-box;
+      display: block;
+    }
+    input:focus{
+      outline: none;
+      border: 0;
+    }
+
+  }
+  .linkParent{
+    text-align: center;
+    padding: 14px;
+    .forgot_password {
+      color: white;
+      text-decoration: none;
+      margin: 1em auto;
+      font-size: 14px;
+    }
+  }
+
+  .input_login{
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 10px 2em;
+    width: 100%;
+  }
+  label{
+    color: #c9d3dc;
+  }
+  .btnParent{
+    button{
+      width: 50%;
+      position: relative;
+      transition: transform 0.3s;
+      display: block;
+      line-height: 2;
+      font-weight: 800;
+      border-radius: 5px;
+      color: white;
+      border: 0;
+      font-size: 16px;
+      text-transform: uppercase;
+      margin: 0.5em auto;
+      background-color: #fd550b;
+      outline:none;
+    }
+  }
+
+}
+
+
+/*LOGINPAGE END*/

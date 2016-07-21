@@ -1,0 +1,28 @@
+.favorite {
+  h1 {
+    color: white;
+    text-align: center;
+    font-weight: 800;
+    font-size: 25px;
+  }
+  ul {
+    li {
+      padding-top: 20px;
+      margin: 0 6%;
+      div {
+        float: left;
+        p {
+          color: rgb(255, 255, 255);
+
+        }
+      }
+
+    }
+    div:nth-child(1) {
+      width: 80%;
+    }
+    div:nth-child(2) {
+      width: 20%;
+    }
+  }
+}

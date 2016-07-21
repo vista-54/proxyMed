@@ -1,0 +1,62 @@
+
+$mainMargin: 0 9px;
+$formPadding: 3em 2em 2em 2em;
+$liBordersInTheMenuPunkts:1px solid white;
+$hColor:rgb(255, 255, 255);
+$orange:#fb560b;
+@import "../../common/scss/reset";
+@import "login/login";
+@import "hospital/patient";
+@import "schedule/shedule";
+@import "partView/partView";
+@import "procedure/procedure";
+@import "userProfile/userProfile";
+@import "queue/queue";
+@import "favorite/favorite";
+@import "../../common/scss/angularStyles";
+@import "../../common/scss/fonts";
+@import "../../common/directives/backBtn/backBtn";
+@import "../../common/directives/calendar/calendar";
+//@import "../../common/directives/menu/menu";
+@import "../../common/directives/header/header";
+@import "../../common/directives/checkBox/ch";
+
+
+
+.sisterAlarmBg {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  //opacity: 0.9;
+  height: 100vh;
+  //background: #50597b;
+
+}
+body {
+  /*font-family: Roboto,sans-serif,"Helvetica Neue";*/
+  /*background: rgba(212, 212, 212,0.49);*/
+  background-image: url('../../common/img/bg_login.jpg');
+  //background-size: cover;
+  /*-webkit-font-smoothing: antialiased;*/
+  min-height: 100% !important;
+  height: auto !important;
+  background-size: cover;
+}
+header{
+  padding: $formPadding;
+  img{
+    width: 100%;
+  }
+}
+md-menu-content.md-default-theme, md-menu-content {
+  background-color: rgb(55, 66, 85);
+  border: 1px solid rgb(255,255,255);
+}
+md-menu-item>.md-button span {
+  margin-top: auto;
+  margin-bottom: auto;
+  color: rgb(255,255,255);
+}
+px-favorites{
+
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="main">
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.7.1/angular-material.min.css">-->
+    <link rel="stylesheet"
+          href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+    <link rel="stylesheet" type="text/css" href="common/css/main.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="css/css.css"/>-->
+</head>
+
+<body>
+
+<div ui-view class="MainView"></div>
+
+<!--JQ-->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- Angular Material requires Angular.js Libraries -->
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.0/angular-material-icons.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+
+<!--mainModule-->
+<script src="js/mainModule/mainModule.js"></script>
+<!--login-->
+<script src="js/mainModule/login/loginModel.js"></script>
+<script src="js/mainModule/login/loginCtrl.js"></script>
+<script src="js/mainModule/login/loginDirectives.js"></script>
+
+<!--hospital-->
+<script src="js/mainModule/hospital/hospitalCtrl.js"></script>
+<!--shedule-->
+<script src="js/mainModule/schedule/sheduleModel.js"></script>
+<script src="js/mainModule/schedule/scheduleCtrl.js"></script>
+<!--partView-->
+<script src="js/mainModule/partView/partViewCtrl.js"></script>
+<!--queue-->
+
+<script src="js/mainModule/queue/queueCtrl.js"></script>
+<script src="js/mainModule/queue/queueModel.js"></script>
+<!--procedure-->
+<script src="js/mainModule/procedure/procedureCtrl.js"></script>
+<script src="js/mainModule/procedure/procedureModel.js"></script>
+<!--favorites-->
+<script src="js/mainModule/favorite/favoriteCtrl.js"></script>
+<script src="js/mainModule/favorite/favoriteModel.js"></script>
+<script src="js/mainModule/userProfile/userProfileCtrl.js"></script>
+<script src="js/mainModule/mainInfo/mainInfoCtrl.js"></script>
+<script src="js/mainModule/myDoctors/favoritesdoctorsCtrl.js"></script>
+
+<!--&lt;!&ndash;factories&ndash;&gt;-->
+<!--<script src="common/factories/userUrl.js"></script>-->
+<!--<script src="common/factories/constant.js"></script>-->
+
+<!--common-->
+<script src="common/factories/userUrl.js"></script>
+<script src="common/factories/constant.js"></script>
+<script src="common/directives/backBtn/backBtn.js"></script>
+<script src="common/directives/validInput.js"></script>
+<script src="common/directives/calendar/calendar.js"></script>
+<script src="common/directives/calendar/calendarModel.js"></script>
+<script src="common/directives/calendar/calendarCtrl.js"></script>
+<script src="common/directives/header/header.js"></script>
+<script src="common/directives/header/headerCtrl.js"></script>
+<script src="common/directives/checkBox/checkBox.js"></script>
+<script src="common/directives/favorites/favorites.js"></script>
+<script src="common/directives/favorites/favoriteCtrl.js"></script>
+<!--<script src="common/directives/menu/menuCtrl.js"></script>-->
+<!--<script src="common/directives/menu/menu.js"></script>-->
+<script src="common/services/requestService.js"></script>
+
+<!--directives-->
+<!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>-->
+<!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>-->
+<!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-aria.min.js"></script>-->
+
+<!--<script src="//ajax.googleapis.com/ajax/libs/angular_material/0.7.1/angular-material.min.js"></script>-->
+
+
+<!--components-->
+<!--<script src="cordova.js"></script>-->
+<script src="common/components/ngCordova/dist/ng-cordova.min.js"></script>
+<!--<script src="common/components/moment/moment.js"></script>-->
+<!--<script src="common/components/angular-moment/angular-moment.min.js"></script>-->
+
+</body>
+</html>

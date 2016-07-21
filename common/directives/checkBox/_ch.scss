@@ -1,0 +1,13 @@
+.ch{
+  position: relative;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1px solid white;
+  outline: none;
+  img{
+    position: absolute;
+    width: 100%;
+  }
+}

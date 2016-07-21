@@ -1,0 +1,152 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14.06.2016, 14:15:02
+    Author     : Виталий
+*/
+
+
+
+/*CSS RESET END*/
+
+/*INDEX HMTL START*/
+h1{
+    /*height: 45px;*/
+    /*background: rgb(51, 199, 239);*/
+    /*box-shadow: 0 5px 6px 3px rgb(199, 199, 199);*/
+}
+
+
+.MainView {
+    /*padding-top: 10px;*/
+}
+
+/*INDEX HMTL END*/
+
+
+
+
+    /*PART VIEW START*/
+.dataPickerParent {
+    text-align: center;
+}
+
+/*PART VIEW END*/
+
+/*CABINET START*/
+.userPhotoParent {
+    text-align: center;
+}
+
+.username {
+    text-align: center;
+    font-weight: 800;
+    font-size: 25px;
+    font-family: 'Trebuchet MS';
+    font-style: italic;
+}
+
+.cabinet {
+
+}
+
+.cabinet ul li {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px 0;
+    text-align: center;
+    margin: 10px auto;
+    width: 50%;
+    background: rgb(230, 230, 230);
+}
+
+.cabinet ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+/*CABINET END*/
+
+
+
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.partView ul li {
+    border: 1px solid rgb(0, 0, 0);
+    box-sizing: border-box;
+    box-shadow: 0 5px 6px 3px rgb(199, 199, 199);
+    /*text-align: center;*/
+    margin: 10px auto;
+    width: 98%;
+    background: rgb(230, 230, 230);
+}
+
+.partView ul li a {
+    padding: 10px 5px;
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.partView .doctor {
+    float: left;
+    width: 70%;
+}
+
+.partView .timeLine {
+    float: right;
+    width: 30%;
+    text-align: right;
+}
+
+.partView input {
+    border-bottom: 0;
+}
+
+/*PART VIEW */
+
+/*QUEUE START*/
+.queue {
+
+}
+
+.queue ul li {
+    border: 1px solid rgb(0, 0, 0);
+    box-sizing: border-box;
+    box-shadow: 0 5px 6px 3px rgb(199, 199, 199);
+    text-align: center;
+    margin: 10px 6px;
+    width: 30%;
+    float: left;
+    background: rgb(230, 230, 230);
+}
+
+.queue ul li a {
+    padding: 10px 5px;
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/*QUEUE END*/
+
+/*MY PROCEDURE START*/
+.invisible {
+    display: none;
+}
+
+/*MY PROCEDURE END*/

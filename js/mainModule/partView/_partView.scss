@@ -1,0 +1,38 @@
+.partView {
+  margin: $mainMargin;
+  input {
+    padding: 10px 10px 10px 30%;
+    border: none;
+  }
+
+}
+.partView,.procedures,.mainInfo{
+  ul {
+    li {
+      width: 100%;
+      border: 0;
+      color: rgb(255,255,255);
+      a {
+        div {
+          display: inline-block;
+
+        }
+        div:nth-child(1) {
+          text-align: left;
+          float: left;
+          width: 70%;
+        }
+        div:nth-child(2) {
+          width: 30%;
+          float: right;
+          padding: 7px 0;
+          border: 1px solid white;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}
+.workTime{
+  //font-size: 10px;
+}

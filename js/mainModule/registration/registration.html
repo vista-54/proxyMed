@@ -1,0 +1,166 @@
+<div class="registration">
+    <form name="registrationForm">
+        <div class="group">
+            <input ng-model="registration.first_name" name="name" required
+                   ng-pattern="/^([a-zA-ZА-Яа-я0-9ЇїёЁіІ])*$/"><span class="highlight"></span><span class="bar"></span>
+            <label>{{"Ім'я" }} *</label>
+            <div class="errMsg">
+                {{registrationForm.name.$touched ? (registrationForm.name.$valid ? '' : 'Поле заповнене не коректно' ) :
+                ''}}
+            </div>
+        </div>
+        <div class="group">
+            <input ng-model="registration.last_name" name="lastname" required
+                   ng-pattern="/^([a-zA-ZА-Яа-я0-9ЇїёЁіІ])*$/"><span class="highlight"></span><span class="bar"></span>
+            <label>{{"Прізвище" }} *</label>
+            <div class="errMsg">
+                {{registrationForm.lastname.$touched ? (registrationForm.lastname.$valid ? '' : 'Поле заповнене не
+                коректно' ) : ''}}
+            </div>
+        </div>
+        <div class="group">
+            <input ng-model="registration.second_name" name="second_name" required
+                   ng-pattern="/^([a-zA-ZА-Яа-я0-9ЇїёЁіІ])*$/"><span class="highlight"></span><span class="bar"></span>
+            <label>{{"По-батькові" }} *</label>
+            <div class="errMsg">
+                {{registrationForm.second_name.$touched ? (registrationForm.second_name.$valid ? '' : 'Поле заповнене не
+                коректно' ) : ''}}
+            </div>
+        </div>
+        <div class="group">
+            <md-select ng-model="registration.gender" name="gender">
+                <md-option value="7">{{"Стать" }}</md-option>
+                <md-option value="0">{{"Чоловіча" }}</md-option>
+                <md-option value="1">{{"Жіноча" }}</md-option>
+            </md-select>
+            <div class="errMsg">
+                {{registrationForm.gender.$touched ? (registrationForm.gender.$modelValue === 7 ? ('Оберіть будь ласка
+                стать' ) : '') : ''}}
+            </div>
+        </div>
+        <div class="group">
+            <input type="date" ng-model="registration.birthday" name="birthday"><span class="highlight"></span><span
+                class="bar"></span>
+            <label>{{"Дата народження" }}</label>
+            <div class="errMsg">
+                {{registrationForm.birthday.$touched ? (registrationForm.birthday.$valid ? '' : 'Поле заповнене не
+                коректно' ) : ''}}
+            </div>
+        </div>
+        <div class="group">
+            <input type="phone" ng-model="registration.phone" name="phone" ng-pattern="/^([0-9+r])*$/"><span
+                class="highlight"></span><span class="bar"></span>
+            <label> {{"Телефон" }}</label>
+            <div class="errMsg">
+                {{registrationForm.mobile.$touched ? (registrationForm.mobile.$valid ? '' : 'Поле заповнене не коректно' )
+                : ''}}
+            </div>
+        </div>
+        <div class="group">
+            <input type="email" ng-model="registration.email" name="email" required><span class="highlight"></span><span
+                class="bar"></span>
+            <label> {{"Ел. пошта" }}*</label>
+            <div class="errMsg">
+                {{registrationForm.email.$touched ? (registrationForm.email.$valid ? '' : 'Поле заповнене не коректно' )
+                : ''}}
+            </div>
+        </div>
+        <div class="group">
+            <input type="text" ng-model="registration.pass_data" name="pass_data" required><span
+                class="highlight"></span><span
+                class="bar"></span>
+            <label> {{"Серія та номер паспорта" }}*</label>
+            <div class="errMsg">
+                {{registrationForm.pass_data.$touched ? (registrationForm.pass_data.$valid ? '' : 'Поле заповнене не коректно' )
+                : ''}}
+            </div>
+        </div>
+        <div class="group">
+            <input type="text" ng-model="registration.street" name="street" required><span
+                class="highlight"></span><span
+                class="bar"></span>
+            <label> {{"Вулиця" }}*</label>
+            <div class="errMsg">
+                {{registrationForm.street.$touched ? (registrationForm.street.$valid ? '' : 'Поле заповнене не коректно'
+                )
+                : ''}}
+            </div>
+        </div>
+        <div class="group">
+            <input type='text' ng-model="registration.house" name="house" required><span
+                class="highlight"></span><span
+                class="bar"></span>
+            <label> {{"будинок" }}*</label>
+            <div class="errMsg">
+                {{registrationForm.house.$touched ? (registrationForm.house.$valid ? '' : 'Поле заповнене не коректно' )
+                : ''}}
+            </div>
+        </div>
+        <div class="group">
+            <input type="text" ng-blur="getClinics()" ng-model="registration.city" name="city" required><span class="highlight"></span><span
+                class="bar"></span>
+            <label>{{"Місто" }}</label>
+            <div class="errMsg">
+                {{registrationForm.city.$touched ? (registrationForm.city.$valid ? '' : 'Поле заповнене не коректно' )
+                : ''}}
+
+            </div>
+        </div>
+        <div class="group">
+            <md-select ng-model="registration.hospital_id" name="gender">
+                <md-option ng-repeat="clinic in clinics" value="{{clinic.id}}">{{clinic.name}} {{clinic.city}} {{clinic.street}} {{clinic.house}}</md-option>
+            </md-select>
+            <div class="errMsg">
+
+            </div>
+
+        </div>
+        <div class="group">
+            <input type="text" ng-model="registration.blood_group" name="blood_group" required><span
+                class="highlight"></span><span
+                class="bar"></span>
+            <label>{{"Група крові" }}</label>
+            <div class="errMsg">
+                {{registrationForm.blood_group.$touched ? (registrationForm.blood_group.$valid ? '' : 'Поле заповнене не
+                коректно' )
+                : ''}}
+            </div>
+        </div>
+
+        <div class="group">
+            <button type="button" class="button btnChoose" ng-click="choosePhoto()">{{"Фото" }}
+                <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+            </button>
+            <!--<md-button id="uploadButton" ng-click="choosePhoto()" class="button btnChoose">Фото</md-button>-->
+            <input id="file" name="file" type="file" style="display: none">
+            <!--<label class="labeBtnInput" for="file">  </label>-->
+            <!--<input type="file" id="file">-->
+        </div>
+        <div class="group">
+            <input type="password" ng-model="registration.password" minlength="6" maxlength="32" name="password"
+                   required><span class="highlight"></span><span class="bar"></span>
+            <label>{{"Пароль" }} *</label>
+            <div class="errMsg">
+                {{registrationForm.password.$touched ? (registrationForm.password.$valid ? '' : 'Мінімальна кількість
+                символів 6' ) : ''}}
+            </div>
+        </div>
+        <div class="group">
+            <input type="password" ng-model="registration.repeat" minlength="6" maxlength="32" name="repeatPwd"
+                   repeat-password original-password="registration.password" required><span
+                class="highlight"></span><span class="bar"></span>
+            <label>{{"Повторіть пароль" }} *</label>
+            <div class="errMsg">
+                {{registrationForm.repeatPwd.$touched ? (registrationForm.repeatPwd.$valid ? '' : 'Паролі не
+                співпадають' ) : ''}}
+            </div>
+        </div>
+        <div class="errMsg">
+            {{errorMsg}}
+        </div>
+        <button type="button" ng-disabled="registration.password !== registration.repeat" class="button btnChoose"
+                ng-click="registrationFnc(registrationForm, registration)">{{"Зареєструватися" }}
+            <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+        </button>
+    </form>
+</div>

@@ -1,0 +1,66 @@
+<div class="patient">
+
+<px-header></px-header>
+    <div class="content">
+        <div class="userBar" ui-sref="userProfile">
+            <div class="sisterAlarmBg">
+
+            </div>
+            <div class="userBarChild">
+                <div class="userAvatarParent">
+                    <img alt="avatar" src="{{user.photo}}">
+                </div>
+                <a>{{username}}</a></div>
+        </div>
+
+
+        <div class="sisterAlarm">
+            <div class="sisterAlarmBg">
+            </div>
+            <div class="sisterAlarmChild">
+
+                <div class="alarmTextParent"><span>Викликати <br> медсестру</span></div>
+                <div class="iconParent">
+                    <ng-md-icon icon="add_alert" style="fill: #fb560b" size="80"></ng-md-icon>
+                </div>
+            </div>
+        </div>
+        <ul class="userMenu">
+            <li ui-sref="schedule">
+                <div class="sisterAlarmBg">
+
+                </div>
+                <div class="parentLinkInLi">
+                    <ng-md-icon icon="schedule" style="fill: white" size="40"></ng-md-icon>
+                    <br><a>Графік<br>чергуваннь</a></div>
+            </li>
+            <li>
+                <div class="sisterAlarmBg">
+
+                </div>
+                <div class="parentLinkInLi">
+                    <ng-md-icon icon="shopping_cart" style="fill: white" size="40"></ng-md-icon>
+                    <br><a>Доставка<br>медикаментів</a></div>
+            </li>
+            <li ui-sref="procedure">
+                <div class="sisterAlarmBg">
+
+                </div>
+                <div class="parentLinkInLi">
+                    <ng-md-icon icon="format_list_bulleted" style="fill: white" size="40"></ng-md-icon>
+                    <br><a>Мої<br>процедури</a>
+                </div>
+            </li>
+            <li>
+                <div class="sisterAlarmBg">
+                </div>
+                <div class="parentLinkInLi">
+                    <ng-md-icon icon="settings" style="fill: white" size="40"></ng-md-icon>
+                    <br><a>Налаштування<br>&nbsp;</a>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+</div>

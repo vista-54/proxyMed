@@ -1,0 +1,16 @@
+<px-header></px-header>
+<div class="parts">
+
+    <h1>Графік чергуваннь</h1>
+    <h2>Оберіть відділення</h2>
+    <ul>
+        <li ng-repeat="part in parts">
+            <div class="sisterAlarmBg">
+
+            </div>
+            <div class="parentLinkInLi">
+                <a ui-sref="part({part_id:{{part.id}}})">{{part.name}}</a>
+            </div>
+        </li>
+    </ul>
+</div>

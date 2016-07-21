@@ -1,0 +1,57 @@
+<header>
+    <img alt="logo" src="common/img/logo.png">
+</header>
+<div class="login" login-animation>
+    <form name="loginform">
+        <div class="inputParent">
+            <ng-md-icon class="icon" icon="phone" style="fill: #858dac" size="35"></ng-md-icon>
+            <input type="tel" valid-input ng-model="user.login" maxlength="12" minlength="12" required
+                   placeholder="Телефон">
+        </div>
+        <div class="inputParent">
+            <ng-md-icon class="icon" icon="lock_outline" style="fill: #858dac" size="35"></ng-md-icon>
+            <input type="password" ng-model="user.password" minlength="6" class="password" placeholder="Пароль">
+        </div>
+        <div class="input_login">
+            <input type="checkbox" id="remember_me">
+            <label for="remember_me" class="remember_me">Запам'ятати мене</label>
+        </div>
+    </form>
+    <div class="btnParent">
+        <button ng-click="login(loginform, user)">Вхід</button>
+    </div>
+    <div class="linkParent">
+        <a class="forgot_password" href="#">Забули пароль?</a>
+    </div>
+    <!--</div>-->
+    <!--<form name="loginform">-->
+    <!--<div class="group">-->
+    <!--<input type="phone" name="phone" ng-model="user.login" required><span class="highlight"></span><span class="bar"></span>-->
+    <!--<label>{{"Телефон"}}</label>-->
+    <!--<div class="errMsg">-->
+    <!--{{loginform.phone.$touched ? (loginform.phone.$valid ? '' : 'Поле заповнене не коректно') : ''}}-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="group">-->
+    <!--<input type="password" ng-model="user.password" name="password" required><span class="highlight"></span><span class="bar"></span>-->
+    <!--<label>{{"Пароль"}}</label>-->
+    <!--<div class="errMsg">-->
+    <!--{{loginform.password.$touched ? (loginform.password.$valid ? '' : 'Поле заповнене не коректно') : ''}}-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="errMsg">-->
+    <!--{{errorMsg}}-->
+    <!--</div>-->
+    <!--<div class="group checkbox">-->
+    <!--<input type="checkbox" id="rememberMe" name="rememberMe" ng-model="user.remember" >-->
+    <!--<label for="rememberMe" name="remember">{{"Запам'ятати мене"}}</label>-->
+    <!--</div>-->
+    <!--<div class="formLinkParent">-->
+    <!--<a ui-sref="registration">Реєстрація</a></div>-->
+    <!--<div class="btnParrentBlock">-->
+    <!--<button type="button" class="button btnChoose" ng-click="login(loginform, user)">{{"Увійти"}}-->
+    <!--<div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>-->
+    <!--</button>-->
+    <!--</div>-->
+    <!--</form>-->
+</div>

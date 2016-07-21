@@ -1,0 +1,702 @@
+/*CSS RESET START*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*CSS RESET END*/
+/*LOGINPAGE START*/
+header h1 {
+  text-transform: uppercase;
+  color: #156884;
+  font-size: 30px;
+  text-align: center;
+  height: 45px;
+  padding: 36px 0 0; }
+
+input::-webkit-input-placeholder {
+  color: #c9d3dc; }
+
+a, div, h1 {
+  font-family: 'Trebuchet MS'; }
+
+hgroup {
+  text-align: center;
+  margin-top: 4em; }
+
+h1, h3 {
+  font-weight: 300; }
+
+h1 {
+  color: rgba(0, 0, 0, 0.87); }
+
+h3 {
+  color: #4a89dc; }
+
+form {
+  /*width: 380px;*/
+  /*margin:0 auto;*/
+  padding: 0 2em;
+  position: relative;
+  z-index: 3;
+  /*background: #fafafa;*/
+  /*    border: 1px solid #ebebeb;
+      box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;*/ }
+  form div {
+    position: relative; }
+    form div .icon {
+      position: absolute; }
+
+.group {
+  position: relative;
+  margin-bottom: 45px; }
+
+input[type=checkbox] {
+  -webkit-appearance: checkbox;
+  display: inline-block;
+  width: auto; }
+
+input:focus {
+  outline: none;
+  border: 0; }
+
+/* Label */
+/* active */
+/* Underline */
+.bar {
+  position: relative;
+  display: block;
+  width: 100%; }
+
+.bar:before, .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #4d98b1;
+  transition: all 0.2s ease; }
+
+.bar:before {
+  left: 50%; }
+
+.bar:after {
+  right: 50%; }
+
+/* active */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width: 50%; }
+
+/* Highlight */
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5; }
+
+/* active */
+input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease; }
+
+/* Animations */
+@keyframes inputHighlighter {
+  from {
+    background: #4a89dc; }
+  to {
+    width: 0;
+    background: transparent; } }
+
+/* Button */
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  margin: .3em 0 1em 0;
+  width: 100%;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  letter-spacing: 1px;
+  background: #4d98b1;
+  border: 0;
+  border: 1px solid white;
+  /*border-bottom: 2px solid #3160B6;*/
+  cursor: pointer;
+  transition: all 0.15s ease; }
+
+.button:focus {
+  outline: 0; }
+
+/* Button modifiers */
+.buttonBlue {
+  background: #4a89dc;
+  text-shadow: 1px 1px 0 rgba(39, 110, 204, 0.5); }
+
+.buttonGreen {
+  background: #23C108;
+  text-shadow: 1px 1px 0 rgba(39, 110, 204, 0.5); }
+
+.buttonBlue:hover {
+  background: #357bd8; }
+
+/* Ripples container */
+.ripples {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent; }
+
+/* Ripples circle */
+.ripplesCircle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25); }
+
+.ripples.is-active .ripplesCircle {
+  animation: ripples .4s ease-in; }
+
+/* Ripples animation */
+@keyframes ripples {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 1; }
+  100% {
+    width: 200%;
+    padding-bottom: 200%;
+    opacity: 0; } }
+
+footer {
+  text-align: center;
+  padding: 80px 0 5px; }
+
+footer p {
+  color: #888;
+  font-size: 13px;
+  letter-spacing: .4px; }
+
+footer a {
+  color: #4a89dc;
+  text-decoration: none;
+  transition: all .2s ease; }
+
+footer a:hover {
+  color: #666;
+  text-decoration: underline; }
+
+footer img {
+  width: 80px;
+  transition: all .2s ease; }
+
+footer img:hover {
+  opacity: .83; }
+
+footer img:focus, footer a:focus {
+  outline: none; }
+
+.login {
+  /*background-image: url('../img/bg_login.jpg');*/ }
+  .login .FormBg {
+    height: 400px;
+    position: absolute;
+    width: 100%;
+    background: white;
+    opacity: 0.6;
+    z-index: 1; }
+  .login .login h1 {
+    text-align: center;
+    padding-top: 30px;
+    /*color: rgb(255,255,255);*/ }
+  .login .formLinkParent {
+    text-align: center; }
+  .login .formLinkParent a {
+    color: #9e9797; }
+  .login .inputParent input {
+    height: 38px;
+    background: #50597b;
+    color: #c9d3dc;
+    padding: 0.7em 0 0.7em 3em;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 0.5em auto;
+    width: 100%;
+    border: 0;
+    box-sizing: border-box;
+    display: block; }
+  .login .inputParent input:focus {
+    outline: none;
+    border: 0; }
+  .login .linkParent {
+    text-align: center;
+    padding: 14px; }
+    .login .linkParent .forgot_password {
+      color: white;
+      text-decoration: none;
+      margin: 1em auto;
+      font-size: 14px; }
+  .login .input_login {
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 10px 2em;
+    width: 100%; }
+  .login label {
+    color: #c9d3dc; }
+  .login .btnParent button {
+    width: 50%;
+    position: relative;
+    transition: transform 0.3s;
+    display: block;
+    line-height: 2;
+    font-weight: 800;
+    border-radius: 5px;
+    color: white;
+    border: 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 0.5em auto;
+    background-color: #fd550b;
+    outline: none; }
+
+/*LOGINPAGE END*/
+/*PATIENT START */
+.patient {
+  background-size: cover; }
+  .patient .userBar {
+    text-align: center;
+    overflow: hidden;
+    position: relative; }
+    .patient .userBar a {
+      display: block;
+      padding: 15px;
+      font-size: 20px;
+      text-decoration: none;
+      font-family: serif;
+      float: left;
+      color: #4d98b1; }
+  .patient .userAvatarParent {
+    padding: 12px 17px;
+    float: left; }
+    .patient .userAvatarParent img {
+      width: 25px;
+      border-radius: 20px;
+      float: left; }
+  .patient .userMenu {
+    overflow: hidden; }
+    .patient .userMenu li {
+      list-style: none;
+      float: left;
+      width: 47%;
+      margin-bottom: 6%;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      border: 2px solid white; }
+      .patient .userMenu li a {
+        text-decoration: none;
+        color: white;
+        padding: 5px 0;
+        display: inline-block;
+        font-size: 13px; }
+    .patient .userMenu li:nth-child(1) {
+      float: left; }
+    .patient .userMenu li:nth-child(2) {
+      float: right; }
+    .patient .userMenu li:nth-child(3) {
+      float: left; }
+    .patient .userMenu li:nth-child(4) {
+      float: right; }
+    .patient .userMenu .errMsg {
+      color: #eab1b1; }
+  .patient .content {
+    margin: 4%; }
+  .patient .userBarChild {
+    position: absolute;
+    z-index: 2; }
+  .patient .parentLinkInLi {
+    position: relative;
+    z-index: 3;
+    padding: 16px 0; }
+  .patient .sisterAlarm {
+    text-align: center;
+    margin: 20px 0px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid white; }
+  .patient .sisterAlarmChild {
+    padding: 42px 0;
+    position: relative;
+    z-index: 5;
+    overflow: hidden; }
+  .patient .sisterAlarm div {
+    color: white;
+    font-size: 25px; }
+  .patient .iconParent {
+    float: right;
+    position: relative;
+    width: 50%; }
+  .patient .alarmTextParent {
+    width: 50%;
+    float: left;
+    text-align: center;
+    margin-top: 7px; }
+
+/*PATIENT END */
+/*PARTS START*/
+.parts h1, .partView h1, .queue h1, .procedures h1, .cabinet h1, .mainInfo h1 {
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  padding: 20px 0; }
+
+.parts h2, .partView h2, .queue h2, .procedures h2, .cabinet h2, .mainInfo h2 {
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 15px;
+  color: white; }
+
+.parts ul, .partView ul, .queue ul, .procedures ul, .cabinet ul, .mainInfo ul {
+  overflow: hidden;
+  border-top: 1px solid white;
+  padding: 10px 0;
+  text-align: center; }
+  .parts ul li, .partView ul li, .queue ul li, .procedures ul li, .cabinet ul li, .mainInfo ul li {
+    list-style: none;
+    width: 47%;
+    margin: 0 auto 6%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid white;
+    box-sizing: border-box; }
+    .parts ul li div.parentLinkInLi, .partView ul li div.parentLinkInLi, .queue ul li div.parentLinkInLi, .procedures ul li div.parentLinkInLi, .cabinet ul li div.parentLinkInLi, .mainInfo ul li div.parentLinkInLi {
+      z-index: 3;
+      position: relative;
+      overflow: hidden; }
+    .parts ul li a, .partView ul li a, .queue ul li a, .procedures ul li a, .cabinet ul li a, .mainInfo ul li a {
+      padding: 10px 0;
+      display: block;
+      text-decoration: none;
+      color: white;
+      overflow: hidden; }
+
+.parts {
+  margin: 0 9px;
+  text-transform: uppercase; }
+  .parts ul li:nth-child(2n+1) {
+    float: left; }
+  .parts ul li:nth-child(2n+1) {
+    float: right; }
+
+/*PARTS END*/
+.partView {
+  margin: 0 9px; }
+  .partView input {
+    padding: 10px 10px 10px 30%;
+    border: none; }
+
+.partView ul li, .procedures ul li, .mainInfo ul li {
+  width: 100%;
+  border: 0;
+  color: white; }
+  .partView ul li a div, .procedures ul li a div, .mainInfo ul li a div {
+    display: inline-block; }
+  .partView ul li a div:nth-child(1), .procedures ul li a div:nth-child(1), .mainInfo ul li a div:nth-child(1) {
+    text-align: left;
+    float: left;
+    width: 70%; }
+  .partView ul li a div:nth-child(2), .procedures ul li a div:nth-child(2), .mainInfo ul li a div:nth-child(2) {
+    width: 30%;
+    float: right;
+    padding: 7px 0;
+    border: 1px solid white;
+    box-sizing: border-box; }
+
+.procedures {
+  margin: 0 9px; }
+  .procedures ul {
+    overflow: visible;
+    padding-top: 20px; }
+    .procedures ul li {
+      text-align: left;
+      color: white; }
+      .procedures ul li .visible {
+        display: block; }
+      .procedures ul li .inVisible {
+        display: none; }
+      .procedures ul li a {
+        text-transform: capitalize; }
+      .procedures ul li .parentLinkInLi {
+        padding-left: 5px !important; }
+      .procedures ul li div {
+        float: left;
+        width: 50%; }
+        .procedures ul li div .time {
+          padding-right: 20px;
+          float: left; }
+        .procedures ul li div span {
+          outline: none; }
+
+.userPhotoParent {
+  padding: 10px 0;
+  text-align: center; }
+
+.username {
+  text-align: center;
+  color: white;
+  padding: 10px 0; }
+
+.queue .queueList, .partView ul.list {
+  height: calc(100vh - 355px);
+  overflow: scroll !important;
+  color: white; }
+  .queue .queueList li, .partView ul.list li {
+    width: 100%;
+    border: 0;
+    padding: 5px 0;
+    text-align: left; }
+  .queue .queueList .hour, .partView ul.list .hour {
+    float: left;
+    width: 100%;
+    text-align: left;
+    margin-top: 25px; }
+    .queue .queueList .hour .titleHour, .partView ul.list .hour .titleHour {
+      float: left; }
+    .queue .queueList .hour .titleInput, .partView ul.list .hour .titleInput {
+      float: left; }
+      .queue .queueList .hour .titleInput label:before, .partView ul.list .hour .titleInput label:before {
+        border-radius: 3px; }
+    .queue .queueList .hour .titleInputParent, .partView ul.list .hour .titleInputParent {
+      float: right;
+      width: 80%; }
+
+.minute {
+  float: right;
+  width: 80%; }
+  .minute span {
+    float: left; }
+
+.favorite h1 {
+  color: white;
+  text-align: center;
+  font-weight: 800;
+  font-size: 25px; }
+
+.favorite ul li {
+  padding-top: 20px;
+  margin: 0 6%; }
+  .favorite ul li div {
+    float: left; }
+    .favorite ul li div p {
+      color: white; }
+
+.favorite ul div:nth-child(1) {
+  width: 80%; }
+
+.favorite ul div:nth-child(2) {
+  width: 20%; }
+
+a.md-default-theme:not(.md-button):hover, a:not(.md-button):hover {
+  color: #4d98b1; }
+
+@font-face {
+  font-family: Cabin;
+  src: url(../fonts/Cabin-Medium.ttf), url(fonts/Cabin-SemiBold.ttf), url(fonts/Cabin-Bold.ttf); }
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Regular.ttf);
+  font-weight: normal; }
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Light.ttf);
+  font-weight: 100; }
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Medium.ttf);
+  font-weight: 300; }
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Bold.ttf);
+  font-weight: bold; }
+
+.backBtn {
+  float: left; }
+
+.calendarMainBlock {
+  position: fixed;
+  bottom: 0; }
+
+.calendar {
+  display: inline-block;
+  overflow: hidden; }
+  .calendar ul {
+    border: 0; }
+  .calendar li[name=day], .calendar li[name=dayOfWeek] {
+    padding: 4px 0;
+    display: block;
+    float: left;
+    width: 14.28571% !important;
+    outline: none;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    font-size: 11px;
+    margin-bottom: 0 !important;
+    text-align: center; }
+    .calendar li[name=day] span, .calendar li[name=dayOfWeek] span {
+      color: white; }
+  .calendar li[name=dayOfWeek] {
+    border-bottom: 1px solid white; }
+
+.weekend {
+  margin-bottom: 5px !important;
+  border: none; }
+  .weekend:after {
+    display: block;
+    content: '';
+    width: 15px;
+    height: 1px;
+    background: red !important;
+    margin: 0 auto; }
+
+.calendar li[name=dayOfWeek] {
+  margin-bottom: 5px !important;
+  border: none; }
+  .calendar li[name=dayOfWeek]:after {
+    display: block;
+    content: '';
+    width: 15px;
+    height: 1px;
+    background: white;
+    margin: 0 auto; }
+
+.currMonthAndYear {
+  padding: 15px 0;
+  text-align: center; }
+  .currMonthAndYear .month {
+    color: white; }
+  .currMonthAndYear .year {
+    color: white;
+    padding: 0 10px; }
+  .currMonthAndYear .nextBtn {
+    float: right; }
+  .currMonthAndYear ng-md-icon {
+    outline: none; }
+
+.shortDays, .currentDay {
+  color: #fb560b !important; }
+
+.whiteBorder {
+  border-color: white !important; }
+
+.dayLast {
+  color: #b1b1b1 !important; }
+
+px-header header {
+  width: 100%;
+  padding: 20px 0 0;
+  text-align: center; }
+  px-header header img {
+    width: 50%;
+    padding: 7px 0 0; }
+
+.ch {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1px solid white;
+  outline: none; }
+  .ch img {
+    position: absolute;
+    width: 100%; }
+
+.sisterAlarmBg {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  height: 100vh; }
+
+body {
+  /*font-family: Roboto,sans-serif,"Helvetica Neue";*/
+  /*background: rgba(212, 212, 212,0.49);*/
+  background-image: url("../../common/img/bg_login.jpg");
+  /*-webkit-font-smoothing: antialiased;*/
+  min-height: 100% !important;
+  height: auto !important;
+  background-size: cover; }
+
+header {
+  padding: 3em 2em 2em 2em; }
+  header img {
+    width: 100%; }
+
+md-menu-content.md-default-theme, md-menu-content {
+  background-color: #374255;
+  border: 1px solid white; }
+
+md-menu-item > .md-button span {
+  margin-top: auto;
+  margin-bottom: auto;
+  color: white; }

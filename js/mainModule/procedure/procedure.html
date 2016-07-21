@@ -1,0 +1,39 @@
+<px-header></px-header>
+<div class="procedures">
+    <h1>
+        Мої процедури
+    </h1>
+    <ul>
+        <li ng-repeat="procedure in procedures">
+            <div>
+                <span>{{procedure.name}}</span>
+            </div>
+            <div>
+                <span class="time">{{getTimeOfMixture(procedure.time)}}</span>
+                <span ch  ng-click="confirm(this.procedure.id)"></span>
+            </div>
+            <!--<div class="sisterAlarmBg">-->
+
+            <!--</div>-->
+            <!--<div class="parentLinkInLi">-->
+
+                <!--<a>{{procedure.name}}</a>-->
+                <!--<a ng-click="openMoreInfo(this.key)">Детальніше</a>-->
+                <!--<div class="moreInfoBlock inVisible">-->
+                    <!--&lt;!&ndash;<div class="times" ng-repeat="day in procedure.by_day">&ndash;&gt;-->
+                        <!--&lt;!&ndash;{{getTimeOfMixture(this.day.time)}}&ndash;&gt;-->
+                        <!--&lt;!&ndash;<ng-md-icon class="check_circle" icon="check_circle" style="fill:#156884" size="20"></ng-md-icon>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<ng-md-icon class="check_circle" icon="cancel" style="fill:#156884" size="20"></ng-md-icon>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<button ng-click="confirmMixture(this.procedure.id,1)">+</button>-->
+            <!--<button ng-click="confirmMixture(this.procedure.id,0)">-</button>-->
+            <!--<button ng-click="openEditForm(this.day.time,this.day.id)">Edit</button>-->
+            <!--</div>-->
+        </li>
+    </ul>
+    <div calendar class="calendarMainBlock">
+
+    </div>
+</div>

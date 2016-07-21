@@ -1,0 +1,89 @@
+.calendarMainBlock{
+  position: fixed;
+  bottom: 0;
+}
+.calendar{
+  display: inline-block;
+  overflow: hidden;
+  ul{
+    border: 0;
+  }
+    li[name=day],li[name=dayOfWeek]{
+      padding: 4px 0;
+      display: block;
+      float: left;
+      width: 14.28571%!important;
+      outline: none;
+      border: 1px solid transparent;
+      box-sizing: border-box;
+      font-size: 11px;
+      margin-bottom:0!important;
+      text-align: center;
+      span{
+        color: rgb(255,255,255);
+      }
+
+    }
+  li[name=dayOfWeek]{
+    border-bottom: 1px solid white;
+
+  }
+}
+.weekend{
+  margin-bottom: 5px!important;
+  border:none;
+  //background: red!important;
+  &:after {
+    display: block;
+    content: '';
+    width: 15px;
+    height: 1px;
+    background: red!important;
+    margin: 0 auto;
+  }
+}
+.calendar li[name=dayOfWeek] {
+  margin-bottom: 5px!important;
+  border:none;
+  &:after {
+    display: block;
+    content: '';
+    width: 15px;
+    height: 1px;
+    background: white;
+    margin: 0 auto;
+  }
+}
+
+.currMonthAndYear{
+  padding: 15px 0;
+  text-align: center;
+  .month{
+
+  color: rgb(255,255,255);
+}
+  .year{
+    color: rgb(255,255,255);
+    padding: 0 10px;
+  }
+  .nextBtn{
+    float: right;
+  }
+  ng-md-icon{
+    outline: none;
+  }
+}
+
+.shortDays,.currentDay{
+  color:$orange!important;
+}
+.currentDay{
+  //border: 1px solid white;
+}
+.whiteBorder{
+
+  border-color:white!important;
+}
+.dayLast{
+  color:#b1b1b1 !important;
+}
