@@ -296,7 +296,8 @@ footer img:focus, footer a:focus {
     border: none;
     text-align: left;
     padding: 10px 2em;
-    width: 100%; }
+    width: 100%;
+    box-sizing: border-box; }
   .login label {
     color: #c9d3dc; }
   .login .btnParent button {
@@ -366,7 +367,8 @@ footer img:focus, footer a:focus {
     .patient .userMenu .errMsg {
       color: #eab1b1; }
   .patient .content {
-    margin: 4%; }
+    margin: 4%;
+    margin-bottom: 0; }
   .patient .userBarChild {
     position: absolute;
     z-index: 2; }
