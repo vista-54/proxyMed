@@ -1,15 +1,16 @@
 <header>
     <span back-btn></span>
     <img alt="logo" src="common/img/logo.png">
+
     <!--<span menu></span>-->
 
 
 
-    <md-menu style="float: right;padding: 0 3%">
-        <!--<md-button aria-label="Open demo menu" class="md-icon-button" >-->
+    <md-menu md-offset="0 20" style="padding: 0 3%;left: 0;" >
+        <!--<md-button aria-label="Open demo menu" class="md-icon-button"  style="float:right;padding: 0 3%">-->
             <ng-md-icon  icon="menu" ng-click="$mdOpenMenu($event)" style="fill:white" size="40"></ng-md-icon>
         <!--</md-button>-->
-        <md-menu-content width="6">
+        <md-menu-content  width="6">
             <md-menu-item ng-repeat="item in menuItems">
                 <md-button ui-sref="{{item.link}}">
                      {{item.name}}
@@ -19,3 +20,6 @@
     </md-menu>
     </md-menu>
 </header>
+<!--<div ng-show="globalLoader">-->
+    <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+<!--</div>-->

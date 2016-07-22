@@ -2,7 +2,8 @@
  * Created by Vista on 15.07.16.
  */
 
-main.controller('headerCtrl', function ($scope, $state) {
+main.controller('headerCtrl', function ($scope, $state, $rootScope) {
+    // $rootScope.globalLoader=false;
     $scope.menuItems = [
         {
             'name': 'Кабінет',

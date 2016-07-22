@@ -1,9 +1,11 @@
 /**
  * Created by Vista on 07.07.16.
  */
-main.service('requestService', function ($http, userUrl, $sessionStorage) {
+main.service('requestService', function ($http, userUrl, $sessionStorage,$rootScope) {
     var action = {
+
     request : function (method, action, data, config, handleSuccess, handleError) {
+        $rootScope.globalLoader=true;
         if($sessionStorage.auth_key){
            var auth_key='&access-token='+$sessionStorage.auth_key;
         }
@@ -15,6 +17,7 @@ main.service('requestService', function ($http, userUrl, $sessionStorage) {
             params: getConfig,
             data: postConfig
         });
+        $rootScope.globalLoader=false;
         return (req.then(handleSuccess, handleError))
     }
 }
