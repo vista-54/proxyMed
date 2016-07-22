@@ -8,9 +8,9 @@ main.directive('pxHeader', ['$rootScope',function ($rootScope) {
         link: function (scope, element, attrs) {
             console.log('Calendarlink');
             console.log(scope.month);
-            $rootScope.$watch('globalLoader',function () {
-                console.log($rootScope.globalLoader);
-            })
+            // $rootScope.$watch('globalLoader',function () {
+            //     console.log($rootScope.globalLoader);
+            // })
         },
         controller: 'headerCtrl'
     };

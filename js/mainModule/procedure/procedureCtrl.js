@@ -5,7 +5,7 @@
  */
 
 
-main.controller('procedureCtrl', function ($sessionStorage, $scope, $http, $localStorage, $mdDialog, userUrl, ProcedureModel) {
+main.controller('procedureCtrl', function ($sessionStorage, $scope, $http, $localStorage, $mdDialog, userUrl, ProcedureModel,$rootScope) {
 
     $scope.currdate = new Date() / 1000;
 
@@ -20,6 +20,7 @@ main.controller('procedureCtrl', function ($sessionStorage, $scope, $http, $loca
             stationary_id: $sessionStorage.stationary_id
         };
         successCallback = function (result) {
+            $rootScope.globalLoader=false;
             console.log(result);
             $scope.procedures = result.data;
         };

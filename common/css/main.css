@@ -443,9 +443,9 @@ footer img:focus, footer a:focus {
 .parts {
   margin: 0 9px;
   text-transform: uppercase; }
-  .parts ul li:nth-child(2n+1) {
+  .parts ul li:nth-child(n+1) {
     float: left; }
-  .parts ul li:nth-child(2n+1) {
+  .parts ul li:nth-child(2n+2) {
     float: right; }
 
 /*PARTS END*/
@@ -454,6 +454,9 @@ footer img:focus, footer a:focus {
   .partView input {
     padding: 10px 10px 10px 30%;
     border: none; }
+
+.timeLineParent {
+  text-align: center; }
 
 .partView ul li, .procedures ul li, .mainInfo ul li {
   width: 100%;
@@ -532,7 +535,8 @@ footer img:focus, footer a:focus {
 
 .minute {
   float: right;
-  width: 80%; }
+  width: 80%;
+  text-align: left; }
   .minute span {
     float: left; }
 

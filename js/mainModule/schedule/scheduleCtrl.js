@@ -4,10 +4,11 @@
  * and open the template in the editor.
  */
 
-main.controller('scheduleCtrl', ['$scope', 'sheduleModel',
-    function ($scope, sheduleModel) {
+main.controller('scheduleCtrl', ['$scope', 'sheduleModel','$rootScope',
+    function ($scope, sheduleModel,$rootScope) {
         successCallback = function (result) {
             $scope.parts = result;
+            $rootScope.globalLoader=false;
         };
         errorCallback = function (result) {
             console.log(result);

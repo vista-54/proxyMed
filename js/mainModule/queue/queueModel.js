@@ -10,8 +10,8 @@ main.service('queueModel', function (requestService, userUrl, $sessionStorage) {
     var createHours = function (data) {
         var shedule_start = new Date(data.shift.date_from * 1000).getHours();
         var shedule_end = new Date(data.shift.date_to * 1000).getHours();
-        if(shedule_end===0){
-            shedule_end=24;
+        if (shedule_end === 0) {
+            shedule_end = 24;
         }
         var arr = [];
         for (var i = shedule_start; i < shedule_end; i++) {
@@ -20,22 +20,33 @@ main.service('queueModel', function (requestService, userUrl, $sessionStorage) {
         return arr;
     };
     var createMinutes = function (data) {
-        var arr=[];
+        var arr = [];
         for (var i = 0; i < 60; i += data.shift.time_receipt) {
             arr.push(i);
         }
         return arr;
     }
     var model = {
+        init: function (data, config, successCallback, errorCallback) {
+            handleSuccess = function (response) {
+                successCallback(response.data);
+            };
+            handleError = function (response) {
+                errorCallback(response);
+            };
+            requestService.request('POST', userUrl.mainModule.queueTableCtrl.getQueueItems, data, config, handleSuccess, handleError)
+
+        },
         getQueueTable: function (data) {
             console.log(data);
             return {
                 'hours': createHours(data),
                 'minutes': createMinutes(data),
                 'interval': data.shift.time_receipt,
-                'countOfInterval':{'width':100/(60/data.shift.time_receipt)+'%'}
+                'countOfInterval': {'width': 100 / (60 / data.shift.time_receipt) + '%'}
             }
         }
+
     };
     return model;
 });

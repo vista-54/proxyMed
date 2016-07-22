@@ -17,7 +17,7 @@ main.service('requestService', function ($http, userUrl, $sessionStorage,$rootSc
             params: getConfig,
             data: postConfig
         });
-        $rootScope.globalLoader=false;
+       
         return (req.then(handleSuccess, handleError))
     }
 }
