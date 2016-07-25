@@ -724,3 +724,6 @@ md-progress-linear ._md-container {
 
 md-progress-linear.md-default-theme ._md-bar, md-progress-linear ._md-bar {
   background-color: white; }
+
+a.md-default-theme:not(.md-button):hover, a:not(.md-button):hover {
+  color: white; }
