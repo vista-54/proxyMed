@@ -26,4 +26,7 @@ main.controller('loginCtrl', ['$scope', '$state', 'loginModel','$rootScope',
             };
             loginModel.login(user, {}, successCallback, errorCallback);
         };
+        $scope.remember=function () {
+            $('#remember_me').click();
+        }
     }])

@@ -5,7 +5,7 @@ main.directive("ch", [function () {
     return {
         restrict: 'A',
         scope:{
-
+            
         },
         templateUrl: 'common/directives/checkBox/checkbox.html',
         link: function (scope, element, attrs) {
@@ -13,10 +13,12 @@ main.directive("ch", [function () {
             element.on("click", function () {
 
                 if(element.children().children().css('display')==="none"){
-                    element.children().children().show();
+                    // element.children().children().show();
+                    element.children().children().css({'display':'block'});
                 }
                 else{
-                    element.children().children().hide();
+                    // element.children().children().hide();
+                    element.children().children().css({'display':'none'});
                 }
                 // if(typeof element.children().children().attr('src')!=='undefined'){
                 //     element.children().children().removeAttr('src');

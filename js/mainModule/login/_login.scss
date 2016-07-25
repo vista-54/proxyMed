@@ -50,6 +50,7 @@ form {
     position: relative;
       .icon{
         position: absolute;
+        top:2px;
       }
   }
 }
@@ -379,6 +380,7 @@ footer img:focus, footer a:focus {
   }
   label{
     color: #c9d3dc;
+    outline: none;
   }
   .btnParent{
     button{

@@ -87,7 +87,8 @@ form {
   form div {
     position: relative; }
     form div .icon {
-      position: absolute; }
+      position: absolute;
+      top: 2px; }
 
 .group {
   position: relative;
@@ -299,7 +300,8 @@ footer img:focus, footer a:focus {
     width: 100%;
     box-sizing: border-box; }
   .login label {
-    color: #c9d3dc; }
+    color: #c9d3dc;
+    outline: none; }
   .login .btnParent button {
     width: 50%;
     position: relative;
