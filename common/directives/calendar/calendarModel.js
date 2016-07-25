@@ -3,6 +3,7 @@
  */
 
 main.service('calendarModel', function (userConst) {
+    console.log('calendarModel');
     var daysInTheMonth = function (year, month) {
         return new Date(year, month, 0).getDate();
     };
@@ -10,7 +11,7 @@ main.service('calendarModel', function (userConst) {
         return new Date(year, month, 1).getDay();
     };
 
-    var month = new Date().getMonth() + 1;
+    var CurrMonth2 = new Date().getMonth() + 1;
     var year = new Date().getFullYear();
     var currDay = new Date().getDate();
     var currDayOfWeek = new Date().getDay();
@@ -45,17 +46,17 @@ main.service('calendarModel', function (userConst) {
     };
     var model = {
         month: {
-            days: createMonth(daysInTheMonth(year, month), month, year),
+            days: createMonth(daysInTheMonth(year, CurrMonth2), CurrMonth2, year),
             currMonth: {
-                name: userConst.month[month - 1],
-                number: month
+                name: userConst.month[CurrMonth2 - 1],
+                number: CurrMonth2
             },
             currYear: year,
             currDay: currDay,
-            lastMonth: month - 1,
-            nextMonth: month + 1,
+            lastMonth: CurrMonth2 - 1,
+            nextMonth: CurrMonth2 + 1,
             shortDaysOfWeek: userConst.DaysOfWeekShort,
-            startMonth: getStartMonthDay(month - 1, year)
+            startMonth: getStartMonthDay(CurrMonth2 - 1, year)
 
         },
         getMonth: function (m, y) {
@@ -68,7 +69,7 @@ main.service('calendarModel', function (userConst) {
                 currYear: y,
                 lastMonth: m - 1,
                 nextMonth: m + 1,
-                startMonth: getStartMonthDay(month - 1, year)
+                startMonth: getStartMonthDay(m - 1, y)
             }
         }
     };

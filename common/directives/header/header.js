@@ -6,7 +6,7 @@ main.directive('pxHeader', ['$rootScope',function ($rootScope) {
         restrict: 'E',
         templateUrl: 'common/directives/header/header.html',
         link: function (scope, element, attrs) {
-            console.log('Calendarlink');
+            console.log('Headerlink');
             console.log(scope.month);
             // $rootScope.$watch('globalLoader',function () {
             //     console.log($rootScope.globalLoader);

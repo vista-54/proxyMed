@@ -24,7 +24,7 @@ main.directive('day', [function () {
                 element.addClass('whiteBorder');
             })
         },
-        controller: 'calendarCtrl'
+        // controller: 'calendarCtrl'
     };
 }]);
 main.directive('switcher', [function () {
@@ -37,6 +37,6 @@ main.directive('switcher', [function () {
                 // element.addClass('whiteBorder');
             })
         },
-        controller: 'calendarCtrl'
+        // controller: 'calendarCtrl'
     };
 }]);
