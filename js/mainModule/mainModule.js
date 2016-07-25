@@ -8,11 +8,11 @@ var main = angular
     .config(function ($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/login');
         $stateProvider
-            // .state("home", {
-            //     url: "/home",
-            //     templateUrl: "home/home.html",
-            //     controller: "homeCtrl"
-            // })
+        // .state("home", {
+        //     url: "/home",
+        //     templateUrl: "home/home.html",
+        //     controller: "homeCtrl"
+        // })
             .state("login", {
                 url: "/login",
                 templateUrl: "js/mainModule/login/login.html",
@@ -60,15 +60,11 @@ var main = angular
             })
 
 
-
             .state("ambulator", {
                 url: "/ambulator",
                 templateUrl: "user/ambulator.html",
                 controller: "userCtrl"
             })
-            
-
-
 
 
             .state("registration", {
@@ -77,4 +73,12 @@ var main = angular
                 controller: "userCtrl"
             })
 
-    });
+    })
+    .run(function () {
+        console.log('run init successfull');
+        document.addEventListener("deviceready", function () {
+            screen.lockOrientation('portrait');
+            console.log('device is ready!!!');
+        });
+
+    })
