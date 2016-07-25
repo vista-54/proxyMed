@@ -5,7 +5,7 @@ main.service('requestService', function ($http, userUrl, $sessionStorage,$rootSc
     var action = {
 
     request : function (method, action, data, config, handleSuccess, handleError) {
-        $rootScope.globalLoader=true;
+        $rootScope.globalLoader={'opacity':1};
         if($sessionStorage.auth_key){
            var auth_key='&access-token='+$sessionStorage.auth_key;
         }
@@ -17,7 +17,7 @@ main.service('requestService', function ($http, userUrl, $sessionStorage,$rootSc
             params: getConfig,
             data: postConfig
         });
-       
+
         return (req.then(handleSuccess, handleError))
     }
 }

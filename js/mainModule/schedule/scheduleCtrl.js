@@ -8,7 +8,7 @@ main.controller('scheduleCtrl', ['$scope', 'sheduleModel','$rootScope',
     function ($scope, sheduleModel,$rootScope) {
         successCallback = function (result) {
             $scope.parts = result;
-            $rootScope.globalLoader=false;
+            $rootScope.globalLoader={'opacity':0};
         };
         errorCallback = function (result) {
             console.log(result);

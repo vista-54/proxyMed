@@ -11,7 +11,7 @@ main.controller('loginCtrl', ['$scope', '$state', 'loginModel','$rootScope',
             user.phone = '380123456786';
             user.password = '11111111';
             successCallback = function (result) {
-                $rootScope.globalLoader=false;
+                $rootScope.globalLoader={'opacity':0};
                 if (result.status === 0) {//амбулаторный
                     $state.go('ambulator');
                 }
@@ -21,7 +21,7 @@ main.controller('loginCtrl', ['$scope', '$state', 'loginModel','$rootScope',
                 console.log(result);
             };
             errorCallback = function (result) {
-                $rootScope.globalLoader=false;
+                $rootScope.globalLoader={'opacity':0};
                 console.log(result);
             };
             loginModel.login(user, {}, successCallback, errorCallback);

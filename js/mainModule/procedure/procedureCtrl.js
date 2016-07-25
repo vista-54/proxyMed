@@ -20,7 +20,7 @@ main.controller('procedureCtrl', function ($sessionStorage, $scope, $http, $loca
             stationary_id: $sessionStorage.stationary_id
         };
         successCallback = function (result) {
-            $rootScope.globalLoader=false;
+            $rootScope.globalLoader={'opacity':0};
             console.log(result);
             $scope.procedures = result.data;
         };

@@ -27,12 +27,12 @@ main.controller('partViewCtrl', ['$state', '$rootScope', '$scope', '$sessionStor
                 date: Math.round((date / 1000), 3)
             };
             successCallback = function (result) {
-                $rootScope.globalLoader = false;
+                $rootScope.globalLoader = {'opacity':0};
                 $scope.doctors = result.shifts;
                 $scope.currPart = result.department;
             };
             errorCallback = function (result) {
-                $rootScope.globalLoader = false;
+                $rootScope.globalLoader = {'opacity':0};
                 console.log(result);
             };
             partModel.getParts(data, {}, successCallback, errorCallback);

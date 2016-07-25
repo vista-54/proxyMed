@@ -22,12 +22,12 @@ main.controller('queueCtrl', ['$http', '$scope', '$sessionStorage', '$stateParam
                 shifts_id: $stateParams.shifts_id
             };
             successCallback = function (result) {
-                $rootScope.globalLoader = false;
+                $rootScope.globalLoader = {'opacity':0};
                 $scope.currentDoc = result.shift.username;
                 $scope.queues = queueModel.getQueueTable(result);
             };
             errorCallback = function (result) {
-                $rootScope.globalLoader = false;
+                $rootScope.globalLoader = {'opacity':0};
                 console.log(result);
             };
             queueModel.init(data, {}, successCallback, errorCallback);
