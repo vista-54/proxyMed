@@ -8,7 +8,7 @@ main.controller('calendarCtrl', function ($rootScope, $scope, calendarModel) {
         $scope.currentMonth = angular.copy(calendarModel.month.currMonth.number);
         $scope.currentDay = angular.copy(calendarModel.month.currDay);
         $scope.shortDays = angular.copy(calendarModel.month.shortDaysOfWeek);
-    }
+    };
     // $scope.qqq = calendarModel;
     // $scope.$watch('qqq.month.currMonth.number',function(){
     //
