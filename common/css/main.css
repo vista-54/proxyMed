@@ -469,7 +469,7 @@ footer img:focus, footer a:focus {
   .partView ul li a div:nth-child(1), .procedures ul li a div:nth-child(1), .mainInfo ul li a div:nth-child(1) {
     text-align: left;
     float: left;
-    width: 70%; }
+    width: 60%; }
   .partView ul li a div:nth-child(2), .procedures ul li a div:nth-child(2), .mainInfo ul li a div:nth-child(2) {
     width: 30%;
     float: right;
@@ -521,8 +521,8 @@ footer img:focus, footer a:focus {
     padding: 5px 0;
     text-align: left; }
   .queue .queueList .hour, .partView ul.list .hour {
-    float: left;
-    width: 100%;
+    float: right;
+    width: 90%;
     text-align: left;
     margin-top: 25px; }
     .queue .queueList .hour .titleHour, .partView ul.list .hour .titleHour {
@@ -537,7 +537,7 @@ footer img:focus, footer a:focus {
 
 .minute {
   float: right;
-  width: 80%;
+  width: 70%;
   text-align: left; }
   .minute span {
     float: left; }

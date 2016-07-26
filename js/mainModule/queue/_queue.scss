@@ -1,4 +1,4 @@
-.queue .queueList,.partView ul.list {
+.queue .queueList, .partView ul.list {
   height: calc(100vh - 355px);
   overflow: scroll !important;
   color: white;
@@ -9,9 +9,12 @@
     text-align: left;
   }
   .hour {
-    float: left;
+    float: right;
+    width: 90%;
+
+    //float: left;
     //width: 20%;
-    width: 100%;
+    //width: 100%;
     text-align: left;
     margin-top: 25px;
     .titleHour {
@@ -42,12 +45,11 @@
     //line-height: 15px;
   }
 
-
 }
 
 .minute {
   float: right;
-  width: 80%;
+  width: 70%;
   text-align: left;
   span {
     float: left;

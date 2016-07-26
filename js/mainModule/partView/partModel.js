@@ -7,8 +7,8 @@
 
 main.service('partModel', function (requestService, userUrl, $sessionStorage) {
     var model = {
-        getParts: function (data,config, successCallback, errorCallback) {
-        
+        getParts: function (data, config, successCallback, errorCallback) {
+
             handleSuccess = function (response) {
                 successCallback(response.data);
             };

@@ -18,20 +18,18 @@
 
         </div>
         <div class="hour">
-            <li ng-repeat="hour in queues.hours">
+            <li ng-repeat="(k,hour) in queues.hours">
                 <div class="titleHour">
                       <span>
                     {{hour}}
                 </span>
                 </div>
                 <div class="titleInputParent">
-                    <div ng-style="queues.countOfInterval" class="titleInput" ng-repeat="min in queues.minutes">
-                      <!--<input type="checkbox" name="check">-->
-                    <span ch></span>
+                    <div ng-style="queues.countOfInterval" class="titleInput" ng-repeat="(key,min) in queues.minutes">
+                        <!--<input type="checkbox" name="check">-->
+                        <span ch data-min="{{key+1}}" data-hour="{{k+1}}"></span>
                     </div>
                 </div>
-
-
             </li>
         </div>
 

@@ -4,21 +4,20 @@
 main.directive("ch", [function () {
     return {
         restrict: 'A',
-        scope:{
-            
-        },
+        scope: {},
         templateUrl: 'common/directives/checkBox/checkbox.html',
         link: function (scope, element, attrs) {
             // console.log('ch is work');
             element.on("click", function () {
-
-                if(element.children().children().css('display')==="none"){
+                var chArr = angular.element(document).find('.ch');
+                chArr.children().css({'display': 'none'});
+                if (element.children().children().css('display') === "none") {
                     // element.children().children().show();
-                    element.children().children().css({'display':'block'});
+                    element.children().children().css({'display': 'block'});
                 }
-                else{
+                else {
                     // element.children().children().hide();
-                    element.children().children().css({'display':'none'});
+                    element.children().children().css({'display': 'none'});
                 }
                 // if(typeof element.children().children().attr('src')!=='undefined'){
                 //     element.children().children().removeAttr('src');

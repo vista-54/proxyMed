@@ -7,6 +7,11 @@
 main.controller('partViewCtrl', ['$state', '$rootScope', '$scope', '$sessionStorage', '$stateParams', '$http', '$localStorage', 'userUrl', 'userConst', 'partModel',
     function ($state, $rootScope, $scope, $sessionStorage, $stateParams, $http, $localStorage, userUrl, userConst, partModel) {
         $scope.currdate = new Date();
+        // $rootScope.selectedDay={
+        //     day:$scope.currdate.getDate(),
+        //     month:$scope.currdate.getMonth()+1,
+        //     year:$scope.currdate.getFullYear()
+        // };
         console.log($scope.currdate);
         $scope.getDate = function (d) {
             var currDate = new Date(d * 1000);
@@ -47,10 +52,20 @@ main.controller('partViewCtrl', ['$state', '$rootScope', '$scope', '$sessionStor
             //         console.log(error);
             //     });
         };
-        $scope.getShedule($scope.currdate);
-
+        // $scope.getShedule($scope.currdate);
+        if(typeof $rootScope.selectedDay!=='undefined'){
+            $scope.getShedule(new Date($rootScope.selectedDay.year,$rootScope.selectedDay.month-1,$rootScope.selectedDay.day));
+        }
+        else{
+            $scope.getShedule($scope.currdate);
+        }
         $scope.setData = function (day, month, year) {
             $scope.getShedule(new Date(year, month - 1, day));
+            $rootScope.selectedDay={
+                day:day,
+                month:month,
+                year:year
+            };
             console.log('day=>' + day + 'month=>' + month + 'year=>' + year);
         }
     }]);

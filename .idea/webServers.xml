@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a9b380ac-f525-4d4d-bc70-11b814dd983e" name="proxyMed" url="http://apes-at-work.com">
+        <fileTransfer host="apes-at-work.com" port="22" accessType="SFTP" password="dfdadfd8dfc5dfd2dfd3dfc7dfcfdfcedf9bdf98df99" username="u36703204-proxymed">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

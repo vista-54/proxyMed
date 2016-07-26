@@ -3,6 +3,13 @@
  */
 main.controller('calendarCtrl', function ($rootScope, $scope, calendarModel) {
     console.log('calendarCtrl');
+    // console.log($rootScope.selectedDay);
+    // $scope.currentDay = $rootScope.selectedDay;
+    $scope.qqq=calendarModel;
+    // $scope.selectDay=$scope.qqq.selectedDay;
+    // $scope.$watch('qqq',function () {
+    //     console.log($scope.qqq.selectDay);
+    // })
     $scope.init = function () {
         $scope.month = angular.copy(calendarModel.month);
         $scope.currentMonth = angular.copy(calendarModel.month.currMonth.number);
@@ -35,5 +42,5 @@ main.controller('calendarCtrl', function ($rootScope, $scope, calendarModel) {
         $scope.month = calendarModel.getMonth($scope.month.currMonth.number, $scope.month.currYear);
         return $scope.month;
     };
-   
+
 });
