@@ -45,6 +45,16 @@ main.service('queueModel', function (requestService, userUrl, $sessionStorage) {
                 'interval': data.shift.time_receipt,
                 'countOfInterval': {'width': 100 / (60 / data.shift.time_receipt) + '%'}
             }
+        },
+        set: function (data, config, successCallback, errorCallback) {
+            handleSuccess = function (response) {
+                successCallback(response.data);
+            };
+            handleError = function (response) {
+                errorCallback(response);
+            };
+            requestService.request('POST', userUrl.mainModule.queueTableCtrl.setQueueItem, data, config, handleSuccess, handleError)
+
         }
 
     };

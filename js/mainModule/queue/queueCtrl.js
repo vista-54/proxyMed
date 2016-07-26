@@ -31,19 +31,10 @@ main.controller('queueCtrl', ['$http', '$scope', '$sessionStorage', '$stateParam
                 console.log(result);
             };
             queueModel.init(data, {}, successCallback, errorCallback);
-            // $http.post(userUrl.mainModule.api + userUrl.mainModule.queueTableCtrl.getQueueItems + 'access-token=' + $sessionStorage.auth_key, data)
-            //     .success(function (result) {
-            //         console.log(result);
-            //         $scope.queues = queueModel.getQueueTable(result);
-            //         console.log($scope.queues);
-            //         // $scope.partsOfQueues = result.queues;
-            //         // $scope.currentDoc = result.doctor;
-            //     })
-            //     .error(function (error) {
-            //         console.log(error);
-            //     });
         };
         $scope.getQueueItems();
+        ////////////////////////
+
 
         $scope.setQueueItem = function (time_from, time_to) {
             var data = {
@@ -54,16 +45,18 @@ main.controller('queueCtrl', ['$http', '$scope', '$sessionStorage', '$stateParam
                 time_to: time_to,
                 notes: 1
             };
-            $http.post(userUrl.mainModule.api + userUrl.mainModule.queueTableCtrl.setQueueItem + 'access-token=' + $sessionStorage.auth_key, data)
-                .success(function (result) {
-                    $scope.getQueueItems();
-                    alert('Ві успишно стали до черги');
-                    console.log(result);
-                })
-                .error(function (error) {
-                    console.log(error);
-                })
+            queueModel.set(data, {}, successCallback, errorCallback);
+            // $http.post(userUrl.mainModule.api + userUrl.mainModule.queueTableCtrl.setQueueItem + 'access-token=' + $sessionStorage.auth_key, data)
+            //     .success(function (result) {
+            //         $scope.getQueueItems();
+            //         alert('Ві успишно стали до черги');
+            //         console.log(result);
+            //     })
+            //     .error(function (error) {
+            //         console.log(error);
+            //     })
         }
+
         $scope.setData = function (day, month, year) {
             // $scope.getShedule(new Date(year, month - 1, day));
             $rootScope.selectedDay = {

@@ -10,7 +10,9 @@
         ng-class="{'weekend':key===5||key===6}">
         <span></span>
     </li>
-    <li day name="day" data-test-day="{{qqq.selectedDay}}" data-test="{{qqq.selectedMonth===$parent.month.currMonth.number}}" data-test-month="{{qqq.selectedMonth}}" ng-repeat="day in month.days track by $index"
+    <li day name="day" data-test-day="{{qqq.selectedDay}}"
+        data-test="{{qqq.selectedMonth===$parent.month.currMonth.number}}" data-test-month="{{qqq.selectedMonth}}"
+        ng-repeat="day in month.days track by $index"
         ng-class="{'whiteBorder':currentMonth===$parent.month.currMonth.number?(day.day===currentDay):'','whiteBorder':qqq.selectedSheduleMonth===$parent.month.currMonth.number?(day.day===qqq.selectedSheduleDay):''}"
         ng-click="setData(this.day.day,$parent.month.currMonth.number,$parent.month.currYear)">
         <span data-curr-month="{{currentMonth}}" data-month="{{$parent.month.currMonth.number}}" data-day="{{day.day}}"
