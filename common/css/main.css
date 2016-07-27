@@ -681,6 +681,9 @@ px-header header {
     position: absolute;
     width: 100%; }
 
+.inactive {
+  border: 1px solid #abababab; }
+
 .sisterAlarmBg {
   position: absolute;
   width: 100%;

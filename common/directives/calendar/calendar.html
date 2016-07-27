@@ -15,9 +15,10 @@
         ng-repeat="day in month.days track by $index"
         ng-class="{'whiteBorder':currentMonth===$parent.month.currMonth.number?(day.day===currentDay):'','whiteBorder':qqq.selectedSheduleMonth===$parent.month.currMonth.number?(day.last?'':(day.day===qqq.selectedSheduleDay)):''}"
         ng-click="setData(this.day.day,$parent.month.currMonth.number,$parent.month.currYear)">
-        <span data-curr-month="{{currentMonth}}" data-month="{{$parent.month.currMonth.number}}" data-day="{{day.day}}"
+        <span  data-curr-month="{{currentMonth}}" data-month="{{$parent.month.currMonth.number}}"
               curr-day="{{currentDay}}"
               ng-class="{'currentDay':currentMonth===$parent.month.currMonth.number?(day.day===currentDay):'','dayLast':day.last}"
+
         >{{day.day}}</span>
     </li>
 </ul>
