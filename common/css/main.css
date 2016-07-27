@@ -505,6 +505,8 @@ footer img:focus, footer a:focus {
 .userPhotoParent {
   padding: 10px 0;
   text-align: center; }
+  .userPhotoParent img {
+    width: 100%; }
 
 .username {
   text-align: center;
@@ -682,7 +684,7 @@ px-header header {
     width: 100%; }
 
 .inactive {
-  border: 1px solid #abababab; }
+  border: 1px solid #ababab; }
 
 .sisterAlarmBg {
   position: absolute;

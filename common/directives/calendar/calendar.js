@@ -29,12 +29,13 @@ main.directive('day', ['$rootScope', 'calendarModel',
                     var elemArr = angular.element(document).find('.whiteBorder');
                     elemArr.removeClass('whiteBorder');
                     element.addClass('whiteBorder');
-                //
+                    //
                 })
             },
             controller: 'calendarCtrl'
         };
     }]);
+
 main.directive('switcher', ['$sessionStorage', '$rootScope', 'calendarModel',
     function ($sessionStorage, $rootScope, calendarModel) {
         return {

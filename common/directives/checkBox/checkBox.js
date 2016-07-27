@@ -11,10 +11,14 @@ main.directive("ch", [function () {
 
 
             element.on("click", function () {
+                if(element.children().hasClass('inactive')){
+                    return false;
+                }
                 if (attrs.page !== 'remember') {
                     var chArr = angular.element(document).find('.ch');
                     chArr.children().css({'display': 'none'});
                 }
+
                 if (element.children().children().css('display') === "none") {
                     element.children().children().css({'display': 'block'});
                 }
