@@ -2,7 +2,7 @@
  * Created by Vista on 07.07.16.
  */
 main.controller('calendarCtrl', function ($rootScope, $scope, calendarModel) {
-    console.log('calendarCtrl');
+    // console.log('calendarCtrl');
     // console.log($rootScope.selectedDay);
     // $scope.currentDay = $rootScope.selectedDay;
     $scope.qqq=calendarModel;

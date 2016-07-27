@@ -7,8 +7,8 @@ main.directive('calendar', ['$rootScope',
         restrict: 'A',
         templateUrl: 'common/directives/calendar/calendar.html',
         link: function (scope, element, attrs) {
-            console.log('Calendarlink');
-            console.log(scope.month);
+            // console.log('Calendarlink');
+            // console.log(scope.month);
         },
         controller: 'calendarCtrl'
     };
@@ -20,6 +20,9 @@ main.directive('day', ['$rootScope', 'calendarModel',
             restrict: 'A',
             link: function (scope, element, attrs) {
                 element.on("click", function () {
+                    if(element.hasClass('dayLast')){
+                        return false;
+                    }
                     calendarModel.selectedSheduleDay=parseInt(element.children().text());
                     calendarModel.selectedSheduleMonth=parseInt(element.children().attr('data-month'));
                     // console.log(calendarModel.selectedSheduleDay);

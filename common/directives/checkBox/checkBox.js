@@ -7,24 +7,21 @@ main.directive("ch", [function () {
         scope: {},
         templateUrl: 'common/directives/checkBox/checkbox.html',
         link: function (scope, element, attrs) {
-            // console.log('ch is work');
+            // console.log(attrs);
+
+
             element.on("click", function () {
-                var chArr = angular.element(document).find('.ch');
-                chArr.children().css({'display': 'none'});
+                if (attrs.page !== 'remember') {
+                    var chArr = angular.element(document).find('.ch');
+                    chArr.children().css({'display': 'none'});
+                }
                 if (element.children().children().css('display') === "none") {
-                    // element.children().children().show();
                     element.children().children().css({'display': 'block'});
                 }
                 else {
-                    // element.children().children().hide();
                     element.children().children().css({'display': 'none'});
                 }
-                // if(typeof element.children().children().attr('src')!=='undefined'){
-                //     element.children().children().removeAttr('src');
-                // }
-                // else{
-                //     element.children().children().attr('src','common/img/icons/check.png');
-                // }
+
             })
         },
         // controller:function ($scope) {
