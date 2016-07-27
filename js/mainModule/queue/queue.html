@@ -28,7 +28,7 @@
                 <div class="titleInputParent">
                     <div ng-style="queues.countOfInterval" class="titleInput" ng-repeat="(key,min) in queues.minutes">
                         <!--<input type="checkbox" name="check">-->
-                        <span ch data-min="{{key+1}}" data-hour="{{k+1}}" data-test="{{(key+1)%2}}"  ></span>
+                        <span data-page="queue" data-queue-status="false" ch data-min="{{key+1}}" data-hour="{{k+1}}" data-test="{{(key+1)%2}}"  ></span>
                     </div>
                 </div>
             </li>

@@ -11,7 +11,7 @@ main.directive("ch", [function () {
 
 
             element.on("click", function () {
-                if(element.children().hasClass('inactive')){
+                if (element.children().hasClass('inactive')) {
                     return false;
                 }
                 if (attrs.page !== 'remember') {
@@ -19,12 +19,16 @@ main.directive("ch", [function () {
                     chArr.children().css({'display': 'none'});
                 }
 
-                if (element.children().children().css('display') === "none") {
+
+                if (!JSON.parse(element.attr('data-queue-status'))) {
                     element.children().children().css({'display': 'block'});
+                    element.attr('data-queue-status', true);
                 }
                 else {
                     element.children().children().css({'display': 'none'});
+                    element.attr('data-queue-status', false);
                 }
+
 
             })
         },
